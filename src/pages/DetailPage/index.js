@@ -1,29 +1,33 @@
-import axios from '../../api/axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom';
+import axios from '../../api/axios';
 
 const DetailPage = () => {
-  let {movieId} = useParams();
+  const { movieId } = useParams();
   const [movie, setMovie] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(
-        `/movie/${movieId}`
-      )
-      setMovie(response.data);
+      try {
+        const response = await axios.get(
+          `movie/${movieId}`
+        );
+        console.log(response);
+        setMovie(response.data);
+      } catch (error) {
+        console.log(error);
+        navigate(-1);
+      }
     }
     fetchData();
-  }, [movieId]) //movieId가 바뀌면 다시 실행
-  
-  if(!movie) return null;
+  }, [movieId, navigate])
 
   return (
     <section>
       <img 
-        className='modal__poster-img'
-        src={`https://images.tmdb.org/t/p/original${movie.backdrop_path}`}
-        alt='img'
+        src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+        alt="poster"
       />
     </section>
   )

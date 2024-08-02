@@ -6,34 +6,19 @@ const LoginPage = () => {
     <Container>
       <Content>
         <Center>
-          <LogoOne src='/images/cta-logo-one.svg' alt='logoOne' />
+          <LogoOne src="/images/cta-logo-one.svg" alt="로고1" />
           <SignUpLink>지금 가입</SignUpLink>
           <Description>
             영화에 대한 프리미어 액세스를 얻으십시오.
             디즈니 플러스 가격은 다음 주부터 1000원 인상됩니다.
           </Description>
-          <LogoTwo src='images/cta-logo-two.png' alt='logoTwo' />
+          <LogoTwo src='/images/cta-logo-two.png' alt="로고2" />
         </Center>
+        <BgImage />
       </Content>
-      <BgImage />
     </Container>
   )
 }
-
-export default LoginPage
-
-const BgImage = styled.div`
-  height: 100%;
-  background-position: top;
-  background-image: url("/images/login-background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-`
 
 const Container = styled.section`
   overflow: hidden;
@@ -41,7 +26,7 @@ const Container = styled.section`
   flex-direction: column;
   text-align: center;
   height: 100vh;
-`
+`;
 
 const Content = styled.div`
   margin-bottom: 10vw;
@@ -55,14 +40,27 @@ const Content = styled.div`
   flex-direction: column;
   padding: 80px 40px;
   height: 100%;
-`
+`;
+
+const BgImage = styled.div`
+  height: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/images/login-background.jpg");
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+`;
 
 const Center = styled.div`
   max-width: 650px;
   width: 100%;
   display: flex;
   flex-direction: column;
-`
+`;
 
 const LogoOne = styled.img`
   margin-bottom: 12px;
@@ -70,7 +68,7 @@ const LogoOne = styled.img`
   min-height: 1px;
   display: block;
   width: 100%;
-`
+`;
 
 const SignUpLink = styled.a`
   font-weight: bold;
@@ -83,19 +81,19 @@ const SignUpLink = styled.a`
   padding: 16.5px 0;
   border: 1px solid transparent;
   border-radius: 4px;
-  cursor: pointer;
 
   &:hover {
     background-color: #0483ee;
   }
-`
+`;
 
 const Description = styled.p`
+  color: hsla(0, 0%, 95.3%, 1);
   font-size: 11px;
   margin: 0 0 24px;
   line-height: 1.5;
-  letter-spacing: 1.5px;
-`
+  letter-spacing:1.5px;
+`;
 
 const LogoTwo = styled.img`
   max-width: 600px;
@@ -103,4 +101,7 @@ const LogoTwo = styled.img`
   display: inline-block;
   vertical-align: bottom;
   width: 100%;
-`
+`;
+
+
+export default LoginPage

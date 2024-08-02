@@ -8,12 +8,12 @@ import "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCYRrCoy9FP3EJ5Yw73nGvjfEeo169JaBg",
-  authDomain: "react-disney-plus-app-86801.firebaseapp.com",
-  projectId: "react-disney-plus-app-86801",
-  storageBucket: "react-disney-plus-app-86801.appspot.com",
+  apiKey: "AIzaSyAnRIhX905XDNP4HiXSOSPuZ7tC6xp_G3c",
+  authDomain: "react-disney-plus-app-93123.firebaseapp.com",
+  projectId: "react-disney-plus-app-93123",
+  storageBucket: "react-disney-plus-app-93123.appspot.com",
   messagingSenderId: "648913301085",
-  appId: "1:648913301085:web:4a0362d4aa70ecd6f7e7b4"
+  appId: "1:930830399484:web:24d7d96c25ef31b5bc2479"
 };
 
 // Initialize Firebase
